@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;700;900&display=swap");
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #19a2ae;
+  color: #000;
+}
+body::before {
+  content: url(/images/bg-pattern-bottom.svg);
+  position: fixed;
+  left: 560px;
+  top: 330px;
+}
+
+body::after {
+  content: url(/images/bg-pattern-top.svg);
+  position: fixed;
+  right: 650px;
+  bottom: 270px;
+}
+
+.contenedor {
+  z-index: 10;
+  margin: 150px auto;
+  display: block;
+  align-items: center;
+  background-color: #fff;
+  width: 350px;
+  border-radius: 25px;
+}
+.bkg {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 150px;
+  border-radius: 25px 25px 0 0;
+}
+.foto {
+  border-radius: 100px;
+  border: 5px solid #fff;
+  margin-top: -50px;
+}
+.cuerpo {
+  align-items: center;
+  text-align: center;
+}
+.nombre {
+  font-size: 18px;
+  font-weight: 700;
+}
+.edad {
+  font-weight: 400;
+}
+.ciudad {
+  font-weight: 400;
+  font-size: 20px;
+}
+.grides {
+  border-top: 1px solid #dbdbdb;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, minmax(100px, 250px));
+}
+.cantidad {
+  font-weight: 700;
+  font-size: 18px;
+}
+.stilos {
+  display: block;
+  font-weight: 400;
+  font-size: small;
+  letter-spacing: 2px;
+}
+@media (max-width: 600px) {
+  body::after {
+    content: url(/images/bg-pattern-top.svg);
+    position: fixed;
+    right: 134px;
+    bottom: 500px;
+  }
+  body::before {
+    content: url(/images/bg-pattern-bottom.svg);
+    position: fixed;
+    left: 160px;
+    top: 305px;
+  }
+}
